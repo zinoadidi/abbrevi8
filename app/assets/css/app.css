@@ -1,0 +1,54 @@
+.cl-small{
+	font-size:50;
+}
+
+.cl-medium{
+
+}
+
+.cl-large{
+
+}
+
+.background-color{
+	background: #F3E5F5!important;
+}
+
+.cursive{
+	font-family: cursive!important;
+}
+.screen-middle{
+	margin: auto;
+    text-align: center;
+    top: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50%;
+}
+.width-50{
+    width: 50%;
+}
+.width-70{
+    width: 70%;
+}
+.menu-bg{
+	background:#fefeff;
+}
+
+.catOption{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+@media (max-width: 601px){
+.categoryMenu {
+    height: auto;
+}
+}
+@media (min-width: 602px){
+.categoryMenu {
+    height: auto;
+    padding-top: 100px;
+}
+}

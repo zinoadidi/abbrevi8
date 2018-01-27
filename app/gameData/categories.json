@@ -1,0 +1,30 @@
+{
+    "title":"categories",
+    "lastUpdate":"27/1/2018",
+    "data":[
+        {
+            "name":"MESSAGING",
+            "id":1
+        },
+        {
+            "name": "TECH",
+            "id":2
+        },
+        {
+            "name": "FINANCE",
+            "id":3
+        },
+        {
+            "name": "BUSINESS",
+            "id":4
+        },
+        {
+            "name": "WORLD",
+            "id":5
+        },
+        {
+            "name": "POLITICS",
+            "id":6
+        }
+    ]
+}

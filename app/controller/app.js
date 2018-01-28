@@ -233,6 +233,36 @@ function checkSimilarAns(a, b) {
 		if (a.charAt(i) != b.charAt(i))
 			return Math.round(i / len * 100);
 }
+
+function playAudio(option) {
+	
+	x.loop = "loop";
+	//$('#audioDiv').append(x)
+	x.play();
+}
+
+function leaderboardDisplay(){
+	var scores = DB(null,'getScores');
+	var users = DB(null, 'getUsers'); 
+	try {
+		$.each(scores, function (index, value) {
+			
+			var data = `  
+				<li class='w3-medium' id=''><b>${value.score}</b>
+				</li>
+             `;
+			$('#leaderboardDisplay').append(data);
+		});
+		abbrevi8.categories = data.data;
+	} catch (error) {
+		showMessage('Apologies. We we encountered a bug while completing your request :(', 'error')
+		console.log(error)
+	}
+}
+
+
+
+
 /////////////////////////////////////////////////////
 ///////////ABBREVI82D by Zino Adidi ////////////////
 ///////(C) ZSPS 2018. All Rights Reserved//////////

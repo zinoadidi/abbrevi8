@@ -40,3 +40,9 @@ var currentGame={
     correctAnswers: 0,
     score: 0
 }
+
+var backgroundMusic = document.createElement("AUDIO");
+var success = document.createElement("AUDIO");
+var failed = document.createElement("AUDIO");
+var counter = document.createElement("AUDIO");
+//backgroundMusic.src = "app/assets/sounds/background.mp3";

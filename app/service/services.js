@@ -18,6 +18,9 @@ function DB(data,task){
             addUser();
             break;
     
+        case 'addScore':
+            addScore();
+            break;
         default:
             break;
     }
@@ -28,15 +31,23 @@ function DB(data,task){
     function addUser(){
         data.id = db.users.push({
             'username':data.username,
-            'password':data.password
+            'location':data.location,
+            'dateCreated':data.dateCreated
         })
-        
+        message = 'Registration Successful';
+        status = true;
     }
     function deleteUser(){
 
     }
     function addScore(){
-
+        data.id = db.scores.push({
+            'score': data.score,
+            'userId': data.userId,
+            'level': data.level
+        })
+        message = 'Your score has been stored';
+        status = true;
     }
     function listUsers(){
 
@@ -45,13 +56,15 @@ function DB(data,task){
 
     }
     function flushDb() {
-
+        sessionStorage.clear()
+        status = true;
+        message = "reset successful";
     }
     localStorage.database = JSON.stringify(db);
     return {
         data: data,
-        status: true,
-        message:'Account Created Successfully'
+        status: status,
+        message:message
     }
 }
 

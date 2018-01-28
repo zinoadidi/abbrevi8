@@ -4,27 +4,27 @@
     "data":[
         {
             "name":"MESSAGING",
-            "id":1
+            "id":0
         },
         {
             "name": "TECH",
-            "id":2
+            "id":1
         },
         {
             "name": "FINANCE",
-            "id":3
+            "id":2
         },
         {
             "name": "BUSINESS",
-            "id":4
+            "id":3
         },
         {
             "name": "WORLD",
-            "id":5
+            "id":4
         },
         {
             "name": "POLITICS",
-            "id":6
+            "id":5
         }
     ]
 }

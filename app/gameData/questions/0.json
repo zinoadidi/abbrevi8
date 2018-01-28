@@ -1,151 +1,600 @@
 {
-    "title":"Instant Messaging Questions",
-    "lastUpdate":"27/1/2018",
-    "categoryId": 0,
-    "data":[
+"title":"Instant Messaging Questions",
+"lastUpdate":"27/1/2018",
+"categoryId": 0,
+"data":[
         {
-            "question": "sample question 1",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":379
+      "question":"AFK",
+      "answer":"away from the keyboard",
+      "categoryId": 0,
+      "id":379
         },
         {
-            "question": "sample question 2",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":897
+      "question":"A/S/L",
+      "answer":"Age/Sex/location",
+      "categoryId": 0,
+      "id":897
         },
         {
-            "question": "sample question 3",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":12
+      "question":"ASAP",
+      "answer":"As Soon As Possible",
+      "categoryId": 0,
+      "id":12
         },
         {
-            "question": "sample question 4",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":45
+      "question":"ATM",
+      "answer":"At The Moment",
+      "categoryId": 0,
+      "id":23
         },
         {
-            "question": "sample question 5",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":23
+      "question":"A3",
+      "answer":"Anytime Anywhere Anyplace",
+      "categoryId": 0,
+      "id":3
         },
         {
-            "question": "sample question 6",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":3
+      "question":"BBL",
+      "answer":"Be Back Later",
+      "categoryId": 0,
+      "id":15
         },
         {
-            "question": "sample question 7",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":15
+      "question":"BBS",
+      "answer":"Be Back Soon",
+      "categoryId": 0,
+      "id":530
         },
         {
-            "question": "sample question 8",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":530
+      "question":"BBQ",
+      "answer":"Barbecue",
+      "categoryId": 0,
+      "id":5
         },
         {
-            "question": "sample question 9",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":5
+      "question":"B4N",
+      "answer":"Bye For Now",
+      "categoryId": 0,
+      "id":70
         },
         {
-            "question": "sample question 10",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":70
+      "question":"BRB",
+      "answer":"Be Right Back",
+      "categoryId": 0,
+      "id":48
         },
         {
-            "question": "sample question 11",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":48
+      "question":"BRT",
+      "answer":"Be Right There",
+      "categoryId": 0,
+      "id":59
         },
         {
-            "question": "sample question 12",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":59
+      "question":"BTW",
+      "answer":"By The Way",
+      "categoryId": 0,
+      "id":66
         },
         {
-            "question": "sample question 13",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":66
+      "question":"CU",
+      "answer":"See You",
+      "categoryId": 0,
+      "id":23
         },
         {
-            "question": "sample question 14",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":23
+      "question":"CYA",
+      "answer":"See You",
+      "categoryId": 0,
+      "id":28
         },
         {
-            "question": "sample question 15",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":28
+      "question":"CUZ",
+      "answer":"because",
+      "categoryId": 0,
+      "id":99
         },
         {
-            "question": "sample question 16",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":99
+      "question":"EM",
+      "answer":"email",
+      "categoryId": 0,
+      "id":102
         },
         {
-            "question": "sample question 17",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":102
+      "question":"FAV",
+      "answer":"favourite",
+      "categoryId": 0,
+      "id":120
         },
         {
-            "question": "sample question 18",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":120
+      "question":"DND",
+      "answer":"Do not Disturb",
+      "categoryId": 0,
+      "id":176
         },
         {
-            "question": "sample question 19",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":176
+      "question":"EOF",
+      "answer":"End of life",
+      "categoryId": 0,
+      "id":205
         },
         {
-            "question": "sample question 20",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":205
+      "question":"FAQ",
+      "answer":"Frequently asked questions",
+      "categoryId": 0,
+      "id":270
         },
         {
-            "question": "sample question 21",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":270
+      "question":"FTL",
+      "answer":"For the loss",
+      "categoryId": 0,
+      "id":295
         },
         {
-            "question": "sample question 22",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":295
+      "question":"FTW",
+      "answer":"For the win",
+      "categoryId": 0,
+      "id":350
         },
         {
-            "question": "sample question 23",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":350
+      "question":"FYI",
+      "answer":"For your information",
+      "categoryId": 0,
+      "id":495
         },
         {
-            "question": "sample question 24",
-            "answer": "sample answer",
-            "categoryId": 0,
-            "id":495
-        }
+      "question":"FB",
+      "answer":"Facebook",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"F2F",
+      "answer":"face to face",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"FWD",
+      "answer":"forward",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"GTG",
+      "answer":"Got to Go",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"G9",
+      "answer":"Genius",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"GBTW",
+      "answer":"Get back to work",
+      "categoryId": 0,
+      "id": 495
+      },{
+        "question": "GF",
+        "answer": "girlfriend",
+        "categoryId": 0,
+        "id": 495
+    }
+      ,{
+      "question":"GFU",
+      "answer":"Good for you",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"GRATS",
+      "answer":"Congratulations",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"GM",
+      "answer":"Good Morning",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"GN",
+      "answer":"Good Night",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"HAND",
+      "answer":"Have A Nice Day",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"HF",
+      "answer":"Have fun",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"HT",
+      "answer":"hat tip",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"HTH",
+      "answer":"hope that helps",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"IIRC",
+      "answer":"if I remember correctly",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"IRL",
+      "answer":"in real life",
+      "categoryId": 0,
+      "id":495
+        },
+        {
+      "question":"IC",
+      "answer":"I See",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"ICQ",
+      "answer":"I Seek you",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"IM",
+      "answer":"Instant Messenger",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"JK",
+      "answer":"Just Kidding",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"KISS",
+      "answer":"Keep it simple stupid",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"LI",
+      "answer":"LinkedIn",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"LDR",
+      "answer":"Long Distance Relationship",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"LMAO",
+      "answer":"Laugh My Ass Off",
+      "categoryId": 0,
+      "id": 495
+      },{
+      "question":"LOL",
+      "answer":"Laughing Out Loud",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"LTNS",
+      "answer":"Long Time No See",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"L8R",
+      "answer":"Later",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"IC",
+      "answer":"I See",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"M/F",
+      "answer":"Male/Female",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"MSG",
+      "answer":"message",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"M8",
+      "answer":"skate",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"NE1",
+      "answer":"Anyone",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"NP",
+      "answer":"No Problem",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"OIC",
+      "answer":"Oh I See",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"OS",
+      "answer":"Operating System",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"OMG",
+      "answer":"oh my God",
+      "categoryId": 0,
+      "id": 495
+        },
+        {
+      "question":"PLZ",
+      "answer":"please",
+      "categoryId": 0,
+      "id": 495
+        },
+{
+"question":"PPL",
+"answer":"people",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"RIP",
+"answer":"rest in peace",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"S2PID",
+"answer":"stupid",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SD",
+"answer":"sweet dreams",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SEC",
+"answer":"second",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SK8",
+"answer":"skate",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SOME1",
+"answer":"someone",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SPOZ",
+"answer":"suppose",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SRY",
+"answer":"sorry",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SS",
+"answer":"so sorry",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"STR8",
+"answer":"Straight",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SU",
+"answer":"shut up",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SYS",
+"answer":"see you soon",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SUP",
+"answer":"Whats Up",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SYL",
+"answer":"See you later",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"THX",
+"answer":"Thank You",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"OH",
+"answer":"overheard",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"TYVM",
+"answer":"thank you very much",
+"categoryId": 0,
+"id": 495
+},
+{
+"question":"TTYL",
+"answer":"Talk To You Later",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"TG",
+"answer":"Thats great",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"TOS",
+"answer":"Terms of service",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"TC",
+"answer":"Take Care",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"U",
+"answer":"You",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"U4E",
+"answer":"Yours For Ever",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"WB",
+"answer":"Welcome Back",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"W8",
+"answer":"Wait",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"YW",
+"answer":"you are welcome",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"LMK",
+"answer":"Let me know",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"POS",
+"answer":"Parents Over shoulder",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"WTH",
+"answer":"What the hell",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"SOS",
+"answer":"Someone on Shoulder",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"TTYL",
+"answer":"Talk to you later",
+"categoryId": 0,
+"id": 495
+},{
+"question":"BFF",
+"answer":"Best Friends forever",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"BMT",
+"answer":"Before my time",
+"categoryId": 0,
+"id": 495
+},
+{
+"question":"ASAIC",
+"answer":"As soon as I can",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"JFY",
+"answer":"Just for you",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"1NAM",
+"answer":"One in a million",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"ROFL",
+"answer":"Rolling on Floor laughing",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"ROTF",
+"answer":"Rolling on The Floor",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"B4N",
+"answer":"Bye for now",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"404",
+"answer":"No clue",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"4EVA",
+"answer":"Forever",
+"categoryId": 0,
+"id": 495
+} ,{
+"question":"BOT",
+"answer":"Back on Topic",
+"categoryId": 0,
+"id": 495
+},
+{
+"question":"PMSL",
+"answer":"Pissing myself laughing",
+"categoryId": 0,
+"id": 495
+},
+{
+"question":"YSIC",
+"answer":"Why should I care",
+"categoryId": 0,
+"id": 495
+},
+{
+"question":"WRU",
+"answer":"Where are you",
+"categoryId": 0,
+"id": 495
+},
+{
+"question":"WOA",
+"answer":"Work of Art",
+"categoryId": 0,
+"id": 495
+}
+
     ]
 }

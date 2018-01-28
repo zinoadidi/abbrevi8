@@ -14,13 +14,8 @@ var abbrevi8 = {
     settings:{
         difficulty:{
             level:1,
-            timer:40,
-            questions:10,
-            currentQuestion:{},
-            questionAnswered:0,
-            correctAnswers:0,
-            score:0
-
+            timer:60,
+            questions: 5
         }
     },
     categories:[]
@@ -28,7 +23,7 @@ var abbrevi8 = {
 
 var database = {
     users:[],
-    scrores:[],
+    scores:[],
     settings:{},
     questions:[],
     categories:[]
@@ -37,10 +32,11 @@ var database = {
 
 var currentGame={
     category:{
-
     },
-    score:{
-
-    },
-    questions:[]
+    score:0,
+    questions:[],
+    currentQuestion: {},
+    questionAnswered: 0,
+    correctAnswers: 0,
+    score: 0
 }

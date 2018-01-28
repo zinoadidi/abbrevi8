@@ -82,7 +82,7 @@ function loadGame(data,id){
 		} catch (error) {
 			showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
 			loadPage('menu')
-			console.log(error)
+			alert(error)
 		}
 	} else {
 		startLoad();
@@ -101,11 +101,11 @@ function showQuestion(id) {
 			<big class='w3-jumbo w3-animate-fading' style='color:#${generateColor()}!important'>
 			<b>${currentGame.currentQuestion.question}?</b>
 			</big>
-		`)
+			`)
 			$('#submitButton').html('Skip >>')
 			$("#timerWrapperDiv").html(`
 			<div class="gameTimer" data-timer="${abbrevi8.settings.difficulty.timer}" style="height: 100px;width: 80px;"></div>
-		`)
+			`)
 		$(".gameTimer").TimeCircles({
 			start: true,
 			animation_interval: "smooth",
@@ -125,7 +125,8 @@ function showQuestion(id) {
 	} catch (error) {
 		showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
 		loadPage('menu')
-		console.log(error)
+		alert(error)
+		
 	}
 	
 	return false;

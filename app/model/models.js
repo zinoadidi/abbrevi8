@@ -14,7 +14,7 @@ var abbrevi8 = {
     settings:{
         difficulty:{
             level:1,
-            timer:60,
+            timer:59,
             questions: 5
         }
     },

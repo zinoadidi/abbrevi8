@@ -71,8 +71,8 @@ function loadGame(data,id){
 			database.questions = data.data			
 			currentGame.questions = data.data;
 			$("#timerWrapperDiv").html('')
-			$("#gameCategoryTitle").html('<b><span style="color:#e90aec">ACTIVE: '+currentGame.category.name+'</label></b>')
-			var message = 'You have ' + abbrevi8.settings.difficulty.timer +' seconds to provide the full meaning of each acronym!. Ready??';			
+			$("#gameCategoryTitle").html('<b><span style="color:#e90aec">CATEGORY: '+currentGame.category.name+'</label></b>')
+			var message = 'You have ' + abbrevi8.settings.difficulty.timer +' seconds to provide the meaning of each acronym!. Ready??';			
 			swal(message,'Click OK to Begin','info')
 				.then((value) => {
 					currentGame.questions = shuffle(currentGame.questions);
@@ -102,7 +102,7 @@ function showQuestion(id) {
 			<b>${currentGame.currentQuestion.question}?</b>
 			</big>
 		`)
-			$('#submitButton').html('Skip>')
+			$('#submitButton').html('Skip >>')
 			$("#timerWrapperDiv").html(`
 			<div class="gameTimer" data-timer="${abbrevi8.settings.difficulty.timer}" style="height: 100px;width: 80px;"></div>
 		`)
@@ -118,6 +118,9 @@ function showQuestion(id) {
 				Minutes: { show: false },
 				Seconds: { show: true, color: '#' + generateColor() }
 			}
+		});
+		$(".gameTimer").TimeCircles().addListener(function (unit, value, total) {
+			if (total <= 0) submitAnswer('timer');
 		});
 	} catch (error) {
 		showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
@@ -177,12 +180,12 @@ function endGame(){
 	}else{
 		status = 'error';
 	}
-	var message = 'Game Over!. You Scored ' + currentGame.score + ' and got to Level '+currentGame.settings.difficulty.level;
+	var message = 'Game Over!. You Scored ' + currentGame.score + ' and got to Level ' + abbrevi8.settings.difficulty.level;
 	//var msg2 = 'You are currently number ' + leaderboard + ' on the leaderboard.';
 	var msg2 = 'click ok to continue';
 	swal(message, msg2, status)
 	.then((value) => {
-		loadPage('menu')
+		
 	});
 	abbrevi8.settings.difficulty.level = 1;
 	abbrevi8.settings.difficulty.timer = 60;
@@ -190,6 +193,8 @@ function endGame(){
 	currentGame.questionAnswered = 0;
 	currentGame.correctAnswers = 0;
 	currentGame.score = 0;
+	$(".gameTimer").TimeCircles().stop();
+	loadPage('menu')
 	return false;
 }
 
@@ -204,7 +209,7 @@ function levelUp(){
 		currentGame.questionAnswered = 0;
 		currentGame.correctAnswers=0;
 	}
-	var message = 'Level Up!. You now have ' + abbrevi8.settings.difficulty.timer + ' seconds to provide the full meaning of each acronym!. Ready??';
+	var message = 'Level Up!. You now have ' + abbrevi8.settings.difficulty.timer + ' seconds to provide the meaning of each acronym!. Ready??';
 	swal(message, 'Click OK to Continue', 'success')
 	.then((value) => {
 		currentGame.questions = shuffle(currentGame.questions);
@@ -213,10 +218,20 @@ function levelUp(){
 
 }
 function checkInput(){
-	$('#submitButton').html('Abbrevi8!')	
+	$('#submitButton').html('Abbrevi8!');
+	var answerStrenght = checkSimilarAns(currentGame.currentQuestion.answer,$('#answer').val())
+	if(answerStrenght == null || answerStrenght == undefined || answerStrenght ==0){
+		answerStrenght = 0
+	}
+	$('#answerStrenghtDiv').html(`
+		<div class="w3-container w3-round" id="answerStrenght" style="width:${answerStrenght}%;height:3px;background:#d521f3">${answerStrenght}%</div>
+	`)
 }
-function checkTimer(params) {
-	
+
+function checkSimilarAns(a, b) {
+	for (var i = 0, len = Math.max(a.length, b.length); i < len; i++)
+		if (a.charAt(i) != b.charAt(i))
+			return Math.round(i / len * 100);
 }
 /////////////////////////////////////////////////////
 ///////////ABBREVI82D by Zino Adidi ////////////////

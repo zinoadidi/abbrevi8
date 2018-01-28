@@ -1,4 +1,5 @@
 function loadPage(page){
+    startLoad()
     renda.page(page)
 }
 

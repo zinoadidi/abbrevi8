@@ -10,22 +10,25 @@
     </div>
     <div id="gameDivBody" class="w3-container background-color ">
         <div class="w3-left">
-            <h6 id="gameCategoryTitle" class=""></h6>
+            <h6 id="gameCategoryTitle" class="w3-padding"></h6>
         </div>
         <div class="w3-right">
-            <h3 id="scoreDisplayDiv" class="w3-animate-fading w3-text-pink"><b>Score: <span id="scoreDisplayTitle">0</span></b></h3>
+            <h3 id="scoreDisplayDiv" class=" w3-text-pink"><b>SCORE: <span id="scoreDisplayTitle" class="w3-animate-fading">0</span></b></h3>
         </div>
         <div id="questionDiv" class="w3-padding w3-margin">
            <center>
                <div class="w3-white w3-round" style="margin-top:45px; padding-top:25px; padding-bottom:40px">
                     <div id="question">loading..</div>
                     <div id="answerDiv" class="w3-padding-large w3-margin">
-                        <input type="text" id="answer" class="w3-input w3-xlarge" style="color:#ab578e;border: 2px solid #ab578e;font-family:cursive; padding:20px; margin:10px;text-align:center!important;" onkeypress="checkInput()" onchange="checkInput()"/>
-                        <div><button id="submitButton" class="w3-btn w3-transparent w3-border w3-text-purple w3-border-purple w3-xlarge w3-right" onclick="submitAnswer('submit')">Abbrevi8!</button></div>
+                        <input type="text" id="answer" class="w3-input w3-xlarge" style="color:#ab578e;border: 2px solid #ab578e;font-family:cursive; padding:20px; margin:10px;text-align:center!important;" onkeypress="checkInput()" onchange="checkInput()" autofocus/>
+                        <div class="w3-light-grey w3-round w3-container" id="answerStrenghtDiv"></div>                        
+                        <div><button id="submitButton" class="w3-btn w3-border-purple w3-text-purple w3-bottombar w3-xlarge w3-right" onclick="submitAnswer('submit')">Abbrevi8!</button></div>
                     </div>
                </div>
            </center> 
         </div>
+        
     </div>
 </div>
 
+<script>startLoad()</script>

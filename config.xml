@@ -25,9 +25,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-<<<<<<< HEAD
     <engine name="browser" spec="^5.0.3" />
-=======
-    <engine name="android" spec="~6.3.0" />
->>>>>>> b063a0f6e13662836d2cc04babd061f2b59e9d16
 </widget>

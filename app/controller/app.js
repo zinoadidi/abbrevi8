@@ -86,11 +86,7 @@ function loadGame(data,id){
 		} catch (error) {
 			showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
 			loadPage('menu')
-<<<<<<< HEAD
 			alert('them:' + error)
-=======
-			alert(error)
->>>>>>> b063a0f6e13662836d2cc04babd061f2b59e9d16
 		}
 	} else {
 		startLoad();
@@ -112,37 +108,11 @@ function showQuestion(id) {
 			</big>
 			`)
 			$('#submitButton').html('Skip >>')
-<<<<<<< HEAD
 			timer('hook')
 	} catch (error) {
 		showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
 		loadPage('menu')
 		alert('this:'+error)
-=======
-			$("#timerWrapperDiv").html(`
-			<div class="gameTimer" data-timer="${abbrevi8.settings.difficulty.timer}" style="height: 100px;width: 80px;"></div>
-			`)
-		$(".gameTimer").TimeCircles({
-			start: true,
-			animation_interval: "smooth",
-			circle_bg_color: '#090c0f',
-			direction: "Counter-clockwise",
-			count_past_zero: false,
-			time: {
-				Days: { show: false },
-				Hours: { show: false },
-				Minutes: { show: false },
-				Seconds: { show: true, color: '#' + generateColor() }
-			}
-		});
-		$(".gameTimer").TimeCircles().addListener(function (unit, value, total) {
-			if (total <= 0) submitAnswer('timer');
-		});
-	} catch (error) {
-		showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
-		loadPage('menu')
-		alert(error)
->>>>>>> b063a0f6e13662836d2cc04babd061f2b59e9d16
 		
 	}
 	
@@ -289,20 +259,12 @@ function checkSimilarAns(a, b) {
 		if (a.charAt(i) != b.charAt(i))
 			return Math.round(i / len * 100);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> b063a0f6e13662836d2cc04babd061f2b59e9d16
 function playAudio(option) {
 	
 	x.loop = "loop";
 	//$('#audioDiv').append(x)
 	x.play();
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> b063a0f6e13662836d2cc04babd061f2b59e9d16
 function leaderboardDisplay(){
 	var scores = DB(null,'getScores');
 	var users = DB(null, 'getUsers'); 
@@ -318,7 +280,6 @@ function leaderboardDisplay(){
 		abbrevi8.categories = data.data;
 	} catch (error) {
 		showMessage('Apologies. We we encountered a bug while completing your request :(', 'error')
-<<<<<<< HEAD
 		alert('that:' + error)
 		
 		console.log(error)
@@ -364,14 +325,6 @@ function showEmoji(type){
 function hideEmoji() {
 	$('.emoji_class').fadeOut();
 }
-=======
-		console.log(error)
-	}
-}
-
-
-
->>>>>>> b063a0f6e13662836d2cc04babd061f2b59e9d16
 
 /////////////////////////////////////////////////////
 ///////////ABBREVI82D by Zino Adidi ////////////////

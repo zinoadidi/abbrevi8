@@ -8,14 +8,20 @@
 
 .cl-large{
 
-}
+} 
 
 .background-color{
 	background: #F3E5F5!important;
 }
-
+.nomalFont{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 .cursive{
 	font-family: cursive!important;
+}
+
+.textShadow{
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 .screen-middle{
 	margin: auto;
@@ -39,7 +45,9 @@
 
 .catOption{
 	padding-top: 80px;
-	padding-bottom: 80px;
+    padding-bottom: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
 }
 @media (max-width: 601px){
 .categoryMenu {
@@ -51,4 +59,18 @@
     height: auto;
     padding-top: 100px;
 }
+}
+
+
+#emojisDiv{
+    top: 15%;
+    position: fixed;
+    left: 40%;
+    z-index: 7;
+    
+}
+
+.emoji_class{
+    height:120px !important;
+    width:120px !important;
 }

@@ -14,9 +14,10 @@ var abbrevi8 = {
     settings:{
         difficulty:{
             level:1,
-            timer:59,
+            timer:60,
             questions: 5
-        }
+        },
+        timer:0
     },
     categories:[]
 }
@@ -40,3 +41,10 @@ var currentGame={
     correctAnswers: 0,
     score: 0
 }
+var timerHook = '';
+var answerStrenght = 0;
+var backgroundMusic = document.createElement("AUDIO");
+var success = document.createElement("AUDIO");
+var failed = document.createElement("AUDIO");
+var counter = document.createElement("AUDIO");
+//backgroundMusic.src = "app/assets/sounds/background.mp3";

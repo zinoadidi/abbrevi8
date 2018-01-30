@@ -1,5 +1,7 @@
 $(document).ready(function(){
+	$('.emoji_class').hide()	
 	setTimeout(() => {
+		$('.emoji_class').hide()			
 		checkUser();
 	}, 2000);
 });
@@ -70,19 +72,21 @@ function loadGame(data,id){
 			data = JSON.parse(data);
 			database.questions = data.data			
 			currentGame.questions = data.data;
-			$("#timerWrapperDiv").html('')
+			$("#timer").html(abbrevi8.settings.difficulty.timer)
 			$("#gameCategoryTitle").html('<b><span style="color:#e90aec">CATEGORY: '+currentGame.category.name+'</label></b>')
 			var message = 'You have ' + abbrevi8.settings.difficulty.timer +' seconds to provide the meaning of each acronym!. Ready??';			
 			swal(message,'Click OK to Begin','info')
 				.then((value) => {
 					currentGame.questions = shuffle(currentGame.questions);
 					showQuestion(-1);
+					timer('start')
+					stopLoad()
 				});
 			
 		} catch (error) {
 			showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
 			loadPage('menu')
-			console.log(error)
+			alert('them:' + error)
 		}
 	} else {
 		startLoad();
@@ -97,35 +101,19 @@ function showQuestion(id) {
 	try {
 		if (id) { id = id + 1 } else { id = currentGame.questionAnswered +1; };
 			currentGame.currentQuestion = currentGame.questions[id];
+			//$('#question').show("slide", { direction: "left" }, 1000);
 			$('#question').html(`
-			<big class='w3-jumbo w3-animate-fading' style='color:#${generateColor()}!important'>
+			<big class='w3-jumbo w3-animate-right' style='color:#${generateColor()}!important'>
 			<b>${currentGame.currentQuestion.question}?</b>
 			</big>
-		`)
+			`)
 			$('#submitButton').html('Skip >>')
-			$("#timerWrapperDiv").html(`
-			<div class="gameTimer" data-timer="${abbrevi8.settings.difficulty.timer}" style="height: 100px;width: 80px;"></div>
-		`)
-		$(".gameTimer").TimeCircles({
-			start: true,
-			animation_interval: "smooth",
-			circle_bg_color: '#090c0f',
-			direction: "Counter-clockwise",
-			count_past_zero: false,
-			time: {
-				Days: { show: false },
-				Hours: { show: false },
-				Minutes: { show: false },
-				Seconds: { show: true, color: '#' + generateColor() }
-			}
-		});
-		$(".gameTimer").TimeCircles().addListener(function (unit, value, total) {
-			if (total <= 0) submitAnswer('timer');
-		});
+			timer('hook')
 	} catch (error) {
 		showMessage('Apologies. We we encountered a error while completing your request :(', 'error')
 		loadPage('menu')
-		console.log(error)
+		alert('this:'+error)
+		
 	}
 	
 	return false;
@@ -140,29 +128,69 @@ function shuffle(a) {
     return a;
 }
 
+function timer(option){
+	switch (option) {
+		case 'start':
+			abbrevi8.settings.timer = abbrevi8.settings.difficulty.timer;
+			timerHook = window.setInterval(timer, 1200);	
+			break;		
+		case 'stop':
+			abbrevi8.settings.timer = 0;
+			window.clearInterval(timerHook);
+			break;
+		case 'hook':
+			abbrevi8.settings.timer = abbrevi8.settings.difficulty.timer;
+			break;
+		default:
+			if (abbrevi8.settings.timer <= 0){
+				submitAnswer('timer')
+			}
+			abbrevi8.settings.timer = abbrevi8.settings.timer -1;
+			break;
+	}
+	$("#timerWrapperDiv").html(`
+	<div class="w3-circle w3-white w3-animate-zoom" style="height: 80px;width: 80px;color:#${generateColor()};border:2px solid #${generateColor()}" >
+	<div id="timer" style="position: relative; vertical-align: center; text-align: center;font-size: 50px!important;" class="">${abbrevi8.settings.timer}</div>
+	</div>
+	`);
+}
+
 function submitAnswer(type){
 	currentGame.questionAnswered+=1;
 	var answer = $('#answer').val()
 	if (answer.toLowerCase() == currentGame.currentQuestion.answer.toLowerCase()){
 		if(type =='submit'){
+			showEmoji('thumbs-up')
 			currentGame.score += abbrevi8.settings.difficulty.level + 2;
 		}else if(type=='timer'){
+			showEmoji('clapping')			
 			currentGame.score += abbrevi8.settings.difficulty.level + 1;
 		}
 		currentGame.correctAnswers ++;
 	}else{
-		if (type == 'submit' && currentGame.score>1) {
-			currentGame.score -=1;
-		} else if (type == 'timer' && currentGame.score > abbrevi8.settings.difficulty.level) {
-			currentGame.score -= abbrevi8.settings.difficulty.level;
+		if(answerStrenght > 50){
+			showEmoji('handshake')						
+			currentGame.score += abbrevi8.settings.difficulty.level;			
+		}else{
+			if (type == 'submit' && currentGame.score > 1) {
+				showEmoji('facepalm')										
+				currentGame.score -= 1;
+			} else if (type == 'timer' && currentGame.score > abbrevi8.settings.difficulty.level) {
+				showEmoji('thumbs-down')														
+				currentGame.score -= abbrevi8.settings.difficulty.level;
+			}else{
+				showEmoji('wtf-emoji')																		
+			}
 		}
 	}
 	$('#scoreDisplayTitle').html(currentGame.score)
 	$('#answer').val('')
 	if(currentGame.questionAnswered>=abbrevi8.settings.difficulty.questions){
 		if(currentGame.correctAnswers > (currentGame.questionAnswered/2)){
+			showEmoji('celebrate')														
 			levelUp()			
 		}else{
+			showEmoji('cry-baby')																	
 			endGame()
 		}
 	}else{
@@ -193,11 +221,10 @@ function endGame(){
 	currentGame.questionAnswered = 0;
 	currentGame.correctAnswers = 0;
 	currentGame.score = 0;
-	$(".gameTimer").TimeCircles().stop();
+	timer('stop')
 	loadPage('menu')
 	return false;
 }
-
 function levelUp(){
 	if(abbrevi8.settings.difficulty.level >=11){
 		endGame();
@@ -219,7 +246,7 @@ function levelUp(){
 }
 function checkInput(){
 	$('#submitButton').html('Abbrevi8!');
-	var answerStrenght = checkSimilarAns(currentGame.currentQuestion.answer,$('#answer').val())
+	answerStrenght = checkSimilarAns(currentGame.currentQuestion.answer,$('#answer').val())
 	if(answerStrenght == null || answerStrenght == undefined || answerStrenght ==0){
 		answerStrenght = 0
 	}
@@ -227,12 +254,78 @@ function checkInput(){
 		<div class="w3-container w3-round" id="answerStrenght" style="width:${answerStrenght}%;height:3px;background:#d521f3">${answerStrenght}%</div>
 	`)
 }
-
 function checkSimilarAns(a, b) {
 	for (var i = 0, len = Math.max(a.length, b.length); i < len; i++)
 		if (a.charAt(i) != b.charAt(i))
 			return Math.round(i / len * 100);
 }
+function playAudio(option) {
+	
+	x.loop = "loop";
+	//$('#audioDiv').append(x)
+	x.play();
+}
+function leaderboardDisplay(){
+	var scores = DB(null,'getScores');
+	var users = DB(null, 'getUsers'); 
+	try {
+		$.each(scores, function (index, value) {
+			
+			var data = `  
+				<li class='w3-medium' id=''><b>${value.score}</b>
+				</li>
+             `;
+			$('#leaderboardDisplay').append(data);
+		});
+		abbrevi8.categories = data.data;
+	} catch (error) {
+		showMessage('Apologies. We we encountered a bug while completing your request :(', 'error')
+		alert('that:' + error)
+		
+		console.log(error)
+	}
+}
+function showEmoji(type){
+	switch (type) {
+		case 'thumbs-up':
+			$('#'+type).fadeIn();
+			break;
+		case 'clapping':
+			$('#' + type).fadeIn();			
+			break;
+		case 'handshake':
+			$('#' + type).fadeIn();		
+			break;
+		case 'facepalm':
+			$('#' + type).fadeIn();		
+			break;
+		case 'thumbs-down':
+			$('#' + type).fadeIn();		
+			break;
+		case 'facepalm':
+			$('#' + type).fadeIn();		
+			break;
+		case 'celebrate':
+			$('#' + type).fadeIn();		
+			break;
+		case 'cry-baby':
+			$('#' + type).fadeIn();		
+			break;
+		case 'wtf-emoji':
+			$('#' + type).fadeIn();
+			break;
+		default:
+			break;
+	}
+	console.log(type)
+	$('#emojisDiv').show();
+	setTimeout(hideEmoji,1200);
+}
+
+function hideEmoji() {
+	$('.emoji_class').fadeOut();
+}
+
 /////////////////////////////////////////////////////
 ///////////ABBREVI82D by Zino Adidi ////////////////
 ///////(C) ZSPS 2018. All Rights Reserved//////////

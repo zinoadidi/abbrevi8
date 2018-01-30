@@ -11,20 +11,16 @@
             "id":1
         },
         {
-            "name": "FINANCE",
+            "name": "<small>BUSINESS / FIN</small>",
             "id":2
         },
         {
-            "name": "BUSINESS",
+            "name": "WORLD",
             "id":3
         },
         {
-            "name": "WORLD",
-            "id":4
-        },
-        {
             "name": "POLITICS",
-            "id":5
+            "id":4
         }
     ]
 }

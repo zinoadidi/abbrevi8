@@ -22,6 +22,12 @@ function DB(data,task){
         case 'addScore':
             addScore();
             break;
+        case 'getScores':
+            getScores();
+            break;
+        case 'getUsers':
+            getUsers();
+            break;
         default:
             break;
     }
@@ -48,6 +54,16 @@ function DB(data,task){
             'level': data.level
         })
         message = 'Your score has been stored';
+        status = true;
+    }
+    function getScores() {
+        data.scores = db.scores;
+        message = 'data retrived successfully';
+        status = true;
+    }
+    function getUsers() {
+        data.users = db.users;
+        message = 'data retrived successfully';
         status = true;
     }
     function listUsers(){
